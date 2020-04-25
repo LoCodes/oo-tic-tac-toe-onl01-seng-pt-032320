@@ -75,10 +75,89 @@ class TicTacToe
   # #position_taken?
   #    returns true/false based on whether the position on the board is already occupied
 
-  def postition_taken?
+  def position_taken?(index)
     @board[index] != " "
   end
 
-  def valid_move?
+  # #valid_move?
+  # returns true/false based on whether the position is already occupied
+  # checks that the attempted move is within the bounds of the game board
 
-end
+  def valid_move?(index)
+    if index == 0
+      true
+    else
+      false
+    end
+  end
+
+  # #turn_count
+  #   counts occupied positions
+
+  def turn_count
+    @board.count{|token| token == "X" || token == "O"}
+  end
+
+  # #current_player
+  #  returns the correct player, X, for the third move
+  #  returns the correct player, O, for the fourth move
+
+  def current_player
+    turn_count % 2 == 0 ? "X" : "O"
+  end
+
+  # #turn
+  #   receives user input via the gets method
+  #   calls #input_to_index, #valid_move?, and #current_player (FAILED - 1)
+  #   makes valid moves and displays the board (FAILED - 2)
+  #   asks for input again after a failed validation
+
+  def turn
+    input_to_index = gets.strip
+    #input_to_index == valid_move?
+  end
+
+  # #won?
+  #    returns false for a draw
+  #    returns the winning combo for a win
+
+  def won?
+    WIN_COMBINATIONS
+  end
+
+  # #full?
+  # returns true for a draw
+  # returns false for an in-progress game
+
+  def full?
+  end
+
+  #draw?
+  #  returns true for a draw
+  #  returns false for a won game
+  #  returns false for an in-progress game
+
+   def draw?
+   end
+
+  #  #over?
+  #    returns true for a draw
+  #    returns true for a won game
+  #    returns false for an in-progress game
+
+   def over?
+   end
+
+  #  #winner
+  #  return X when X won
+  #  returns O when O won
+  #  returns nil when no winner
+
+   def winner
+     if "X"
+       puts "winner"
+     else "O"
+       puts "winner"
+     end
+   end
+ end

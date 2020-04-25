@@ -1,0 +1,71 @@
+./lib/tic_tac_toe.rb
+  TicTacToe
+    #initialize
+      assigns an instance variable @board to an array with 9 blank spaces " "
+    WIN_COMBINATIONS
+      defines a constant WIN_COMBINATIONS with arrays for each win combination
+    #display_board
+      prints arbitrary arrangements of the board
+    #input_to_index
+      accepts the user's input (a string) as an argument (FAILED - 1)
+      converts the user's input (a string) into an integer (FAILED - 2)
+      converts the user's input from the user-friendly format (on a 1-9 scale) to t
+he array-friendly format (where the first index starts at 0) (FAILED - 3)
+    #move
+      allows "X" player in the top left and "O" in the middle (FAILED - 4)
+    #position_taken?
+      returns true/false based on whether the position on the board is already occu
+pied (FAILED - 5)
+    #valid_move?
+      returns true/false based on whether the position is already occupied (FAILED
+- 6)
+      checks that the attempted move is within the bounds of the game board (FAILED
+ - 7)
+    #turn_count
+      counts occupied positions (FAILED - 8)
+    #current_player
+      returns the correct player, X, for the third move (FAILED - 9)
+      returns the correct player, O, for the fourth move (FAILED - 10)
+    #turn
+      receives user input via the gets method (FAILED - 11)
+      calls #input_to_index, #valid_move?, and #current_player (FAILED - 12)
+      makes valid moves and displays the board (FAILED - 13)
+      asks for input again after a failed validation (FAILED - 14)
+    #won?
+      returns false for a draw (FAILED - 15)
+      returns the winning combo for a win (FAILED - 16)
+      #full?
+  returns true for a draw (FAILED - 17)
+  returns false for an in-progress game (FAILED - 18)
+#draw?
+  returns true for a draw (FAILED - 19)
+  returns false for a won game (FAILED - 20)
+  returns false for an in-progress game (FAILED - 21)
+#over?
+  returns true for a draw (FAILED - 22)
+  returns true for a won game (FAILED - 23)
+  returns false for an in-progress game (FAILED - 24)
+#winner
+  return X when X won (FAILED - 25)
+  returns O when O won (FAILED - 26)
+  returns nil when no winner (FAILED - 27)
+
+
+  ./lib/tic_tac_toe.rb
+    TicTacToe
+      #play
+        asks for players input on a turn of the game (FAILED - 28)
+        checks if the game is over after every turn (FAILED - 29)
+        plays the first turn of the game (FAILED - 30)
+        plays the first few turns of the game (FAILED - 31)
+        checks if the game is won after every turn (FAILED - 32)
+        checks if the game is draw after every turn (FAILED - 33)
+        stops playing if someone has won (FAILED - 34)
+        congratulates the winner X (FAILED - 35)
+        congratulates the winner O (FAILED - 36)
+        stops playing in a draw (FAILED - 37)
+        prints "Cat's Game!" on a draw (FAILED - 38)
+        plays through an entire game (FAILED - 39)
+  bin/tictactoe
+    instantiates an instance of TicTacToe (FAILED - 40)
+    calls #play on the instance of TicTacToe (FAILED - 41)

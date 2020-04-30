@@ -84,11 +84,14 @@ class TicTacToe
   # checks that the attempted move is within the bounds of the game board
 
   def valid_move?(index)
-    if index == 0
-      true
-    else
-      false
-    end
+    position.between?(0, 8)
+
+    position < 9 && position >= 0 && position_taken?
+    # if index == 0
+    #   true
+    # else
+    #   false
+    # end
   end
 
   # #turn_count
